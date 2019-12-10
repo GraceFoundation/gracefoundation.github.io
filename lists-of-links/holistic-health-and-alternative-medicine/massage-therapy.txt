@@ -1,0 +1,22 @@
+
+Description = example description. Always start a line with "description equals" otherwise the script I made will try to turn it into a link.
+google.ca
+Description = Example description of a Wikipedia link. To be safe, you might want to enter new lines after every link.
+www.wikipedia.org/
+
+description = Example description of a Google link. Still works even if you don't capitalize the word "description".
+https://www.google.com
+
+Description equals Example description of a YouTube link. Still works if you use the word "equals" instead of the symbol "=".
+https://www.youtube.com/
+  Description  =   Example 5. Still works even if you add extra spaces.
+https://www.google.com
+description=Example description 6. Still works even if you remove the spaces around the = symbol.
+https://www.google.com
+Description equal Example number 7.
+https://www.google.com
+description = Example description 8.
+https://www.google.com
+Description = Example 9.
+https://www.google.com
+

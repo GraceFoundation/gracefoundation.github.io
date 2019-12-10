@@ -1,0 +1,157 @@
+* {
+  transition: 0.5s;
+  font-size: 1em;
+  color: #0F2080;
+}
+
+body {
+  background: #85C0F9;
+  font-family: avenir, arial, sans-serif;
+  padding: 2em;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  position: relative;
+  background: #0F2080;
+  color: snow;
+  text-align: center;
+  font-size: 2em;
+  margin-left: -2em;
+  margin-right: -2em;
+}
+
+a {
+  background: snow;
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h1>a {
+  background: snow;
+  text-decoration: none;
+  padding: 0.1em 1em;
+  border-radius: 0.3em;
+  margin: 0;
+  z-index: 1;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container a {
+  flex-basis: 33.33%;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+
+a:hover, a:focus {
+  background: #0F2080;
+  color: snow;
+  outline: none;
+  box-shadow: 0 5px 7px rgba(0,0,0,1), 0 0 0 1em rgba(255, 255, 255, 0.75);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.back-button {
+  position: relative !important;
+  left: -0.5em !important;
+  margin: 0;
+  width: 0;
+  padding: 0;
+}
+
+a.back-button:hover, a.back-button:focus {
+  text-decoration: none;
+}
+
+main {
+  text-align: center;
+}
+
+main p {
+  margin: 3em 0;
+}
+
+main.list-of-links {
+  margin-top: -3em;
+  padding: 1em;
+  margin: auto;
+  width: 50%;
+}
+
+main.list-of-links p.description {
+  text-align: left;
+}
+
+.doors-container {
+  background: #0F2080;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: x-large;
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: large;
+    margin-left: -2em;
+    margin-right: -2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .door {
+    min-width: 100px !important;
+    margin: 1em auto;
+    padding: 0.5em 5em !important;
+  }
+
+  main p {
+    font-size: small;
+  }
+
+  a.back-button {
+    padding: 0.5em !important;
+    border-radius: 2em !important;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  h1 {
+    font-size: large;
+    margin-bottom: 2em;
+  }
+
+  .door {
+    min-width: 10px !important;
+  }
+}
+
+hr {
+  border: 0.2em solid #0F2080;
+  border-radius: 1em;
+}
