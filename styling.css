@@ -155,3 +155,7 @@ hr {
   border: 0.2em solid #0F2080;
   border-radius: 1em;
 }
+
+#header-text {
+  color: snow;
+}

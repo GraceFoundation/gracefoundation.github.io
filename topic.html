@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Site - Topic 1</title>
+    <link rel="stylesheet" href="./styling.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <h1><a href="/" aria-label="Go back to main page of My Site">My Site</a></h1>
+    <h2><a class="back-button" href="/" aria-label="Go back to main sections">&#x25C0; </a><span id="header-text">Topic 1</span></h2>
+    <main></main>
+    <hr>
+    <script src="../../animation.js"></script>
+    <script>
+      var parameters = window.location.href.split('?')[1].replace(/%20/g, ' ').split('&');
+      var topic = parameters.filter(function (argument) {
+        return argument.startsWith('topic=');
+      })[0].split('=')[1];
+      var topicURL = 'https://api.github.com/repos/hchiam123/hchiam123.github.io/contents/doors/' + topic;
+      document.getElementById('header-text').innerHTML = topic;
+      var subsections = getSubsections();
+      async function getSubsections() {
+        var response = await fetch(topicURL);
+        var myJson = await response.json();
+        subsections = myJson.map(function (element) {
+          return element.name;
+        });
+        createList();
+      }
+      function createList() {
+        var main = document.getElementsByTagName('main')[0];
+        main.innerHTML = ''
+        for (var i=0; i<subsections.length; i++) {
+          main.innerHTML += '<p><a class="door" href="./subsection.html?topic=' + topic + '&subsection=' + subsections[i] + '">' + subsections[i].replace(/.txt$/i, '') + '</a></p>';
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grace Foundation - Main Page</title>
-    <link rel="stylesheet" href="styling.css">
+    <title>My Site - Main Page</title>
+    <link rel="stylesheet" href="./styling.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </head>
   <body>
-    <h1><a href="/">Grace Foundation</a></h1>
-    <main class="flex-container doors-container">
-      <a class="door" href="doors/holistic-health-and-alternative-medicine/index.html">Holistic Health and Alternative Medicine</a>
-      <a class="door" href="doors/info-on-hemp/index.html">Info on Hemp</a>
-      <a class="door" href="doors/consciousness-and-spirituality/index.html">Consciousness and Spirituality</a>
+    <h1><a href="/">My Site</a></h1>
+    <main class="flex-container doors-container"><p></p>
     </main>
     <hr>
     <script src="animation.js"></script>
     <script>
+      var doorsURL = 'https://api.github.com/repos/hchiam123/hchiam123.github.io/contents/doors';
+      var topics = getTopics();
+      async function getTopics() {
+        var response = await fetch(doorsURL);
+        var myJson = await response.json();
+        topics = myJson.map(function (element) {
+          return element.name;
+        });
+        createList();
+      }
+      function createList() {
+        var main = document.getElementsByTagName('main')[0];
+        main.innerHTML = ''
+        for (var i=0; i<topics.length; i++) {
+          main.innerHTML += '<a class="door" href="./topic.html?topic=' + topics[i] + '">' + topics[i] + '</a>';
+        }
+      }
       // animate h1 only on the main page
       $('h1').css({
         position: 'absolute',
