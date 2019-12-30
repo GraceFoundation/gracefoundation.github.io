@@ -20,7 +20,7 @@
       var topic = parameters.filter(function (argument) {
         return argument.startsWith('topic=');
       })[0].split('=')[1];
-      var topicURL = 'https://api.github.com/repos/hchiam123/hchiam123.github.io/contents/doors/' + topic;
+      var topicURL = 'https://api.github.com/repos/GraceFoundation/gracefoundation.github.io/contents/doors/' + topic;
       document.getElementById('header-text').innerHTML = topic;
       var subsections = getSubsections();
       async function getSubsections() {
