@@ -25,6 +25,7 @@
         return argument.startsWith('subsection=');
       })[0].split('=')[1];
       document.getElementsByClassName('back-button')[0].href = './topic.html?topic=' + topic;
+      document.title = 'Grace Foundation - ' + subsection;
       document.getElementById('header-text').innerHTML = subsection.replace(/.txt$/i, '');
     </script>
   </body>

@@ -159,3 +159,14 @@ hr {
 #header-text {
   color: snow;
 }
+
+#blurb {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  color: #85C0F9;
+  position: relative;
+  margin: 1em -10vw;
+  height: auto;
+}

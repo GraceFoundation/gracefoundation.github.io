@@ -22,6 +22,7 @@
       })[0].split('=')[1];
       var topicURL = 'https://api.github.com/repos/GraceFoundation/gracefoundation.github.io/contents/doors/' + topic;
       document.getElementById('header-text').innerHTML = topic;
+      document.title = 'Grace Foundation - ' + topic;
       var subsections = getSubsections();
       async function getSubsections() {
         var response = await fetch(topicURL);
