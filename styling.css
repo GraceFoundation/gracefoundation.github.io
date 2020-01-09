@@ -45,6 +45,8 @@ h1>a {
   border-radius: 0.3em;
   margin: 0;
   z-index: 1;
+  display: inline-block;
+  width: fit-content;
 }
 
 .flex-container {
@@ -79,6 +81,21 @@ a.back-button {
 
 a.back-button:hover, a.back-button:focus {
   text-decoration: none;
+}
+
+a>div.smaller-caps {
+  text-align: center;
+  font-size: small;
+  letter-spacing: 2vw;
+  position: relative;
+  left: 1vw;
+  margin-top: -1vh;
+  padding-bottom: 0.5vh;
+}
+
+a:hover>div {
+  color: snow;
+  outline: none;
 }
 
 main {
@@ -164,9 +181,14 @@ hr {
   text-align: center;
   font-size: xx-large;
   font-weight: bold;
+  font-style: italic;
   background: rgba(0, 0, 0, 0.5);
   color: #85C0F9;
   position: relative;
   margin: 1em -10vw;
   height: auto;
+}
+
+#website-explanation {
+  text-align: center;
 }

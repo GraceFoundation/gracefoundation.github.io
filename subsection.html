@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grace Foundation - Subsection</title>
+    <title>Grace Found Foundation - Subsection</title>
     <link rel="stylesheet" href="./styling.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </head>
   <body>
-    <h1><a href="/" aria-label="Go back to main page">Grace Foundation</a></h1>
+    <h1><a href="/" aria-label="Go back to main page"><div class="bigger-caps">GRACE FOUND</div><div class="smaller-caps">FOUNDATION</div></a></h1>
     <h2><a class="back-button" href="./doors/topic.html" aria-label="Go back to section">&#x25C0; </a><span id="header-text">Subsection 1</span></h2>
     <main class="list-of-links"></main>
     <hr>
@@ -25,7 +25,7 @@
         return argument.startsWith('subsection=');
       })[0].split('=')[1];
       document.getElementsByClassName('back-button')[0].href = './topic.html?topic=' + topic;
-      document.title = 'Grace Foundation - ' + subsection;
+      document.title = 'Grace Found Foundation - ' + subsection;
       document.getElementById('header-text').innerHTML = subsection.replace(/.txt$/i, '');
     </script>
   </body>
