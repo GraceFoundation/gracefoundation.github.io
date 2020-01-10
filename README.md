@@ -36,6 +36,8 @@ To add **_links_** (like websites or videos) to a subsection, edit the relevant 
 
 Instead of links, you can also add **_descriptions_** or plain old **_text_** to a subsection. You do that by adding a new line to the relevant `.txt` file, just like you would for a link, except you have to make sure to start that new line with the words `"description equals"` or `"Description equal"` or `"Description ="`. Don't worry about the exact capitalization of those 2 words, because the code should be smart enough to handle a little variation and figure it out in most cases. Always start a new line with those 2 words, otherwise the code will try to turn it into a link.
 
+![image of example links and description](https://github.com/GraceFoundation/gracefoundation.github.io/blob/master/example_links_and_description.svg)
+
 ## Other notes
 
 The [index.html file](https://github.com/GraceFoundation/gracefoundation.github.io/blob/master/index.html) is the code for the home page. If you edit it:
